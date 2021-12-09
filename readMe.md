@@ -3,4 +3,4 @@ Functions such as add horoscope and save, delete and update.
 
 
 
-github: 
+github: https://github.com/wictoriadrefelt/horoscope
