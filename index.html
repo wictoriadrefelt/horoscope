@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-    <title>Document</title>
+    <script src="logic.js" defer></script>
+        <title>Document</title>
 </head>
 <body>
-    <input type="text"> </input>
+    <header>
+        <div>
+            <div>
+
+            </div>
+        </div>
+    </header>
+    <div class="horoscopeDisplay">
+        <h1 id='yourHoroscope'>Something</h1>
+    </div>
+    <form id='inputDate' action="save.php"  method="post"></form>
+    Type your date of birth:<input type="date" name="dateOfBirth"><br>
+    <input type="button" onclick="saveDate()" value="Submit">
+    </form>
+    <div class="space">
+
+    </div>
+    <button id='saveHoroscope'>Save</button>
+    <button id='updateHoroscope'>Update</button>
+    <button id='removeHoroscope'>Delete</button>
 </body>
 </html>
