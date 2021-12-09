@@ -24,3 +24,16 @@ function saveHoroscop(){
 function getHoroscop(){
     // att köra efter vi har fått tillbaka true från php horoscop
 }
+
+
+
+async function makeRequest(url, option) {
+    try {
+        let response = await fetch(url, option)
+        let result = response.json()
+        return result
+
+    } catch(err) {
+        console.error(err)
+    }
+}
