@@ -1,0 +1,12 @@
+
+
+
+//calculate horoscop 
+
+
+
+function calculateHoroscop(){
+    
+}
+
+
