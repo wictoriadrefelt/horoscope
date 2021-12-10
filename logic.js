@@ -2,14 +2,13 @@ window.addEventListener("load", initSite)
 
 async function initSite() {
 
-    let GET = await makeRequest("./api/requestHandler.php?firstname=wic&lastname=sam", {method: "GET"})
+    let GET = await makeRequest("./api/addHoroscope.php", {method: "GET"})
     console.log(GET)
     
-    let product = { name: "Ihpone", price: 6000}
     let body = new FormData()
-    body.set("body", JSON.stringify(product))
+    body.set("body", JSON.stringify(horoscope))
 
-    let POST = await makeRequest("./api/requestHandler.php", {method: "POST", body })
+    let POST = await makeRequest("./api/addHoroscope.php", {method: "POST", body })
     console.log(POST)
     console.log(body)
 }
