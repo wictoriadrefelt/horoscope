@@ -5,28 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
     <script src="logic.js" defer></script>
-        <title>Document</title>
+        <title>Horoscope</title>
 </head>
-<body>
+<body class='backdrop'>
     <header>
-        <div>
-            <div>
-
-            </div>
-        </div>
+        <h1>Welcome to your personal horoscope</h1>
     </header>
     <div class="horoscopeDisplay">
         <h1 id='yourHoroscope'>Something</h1>
     </div>
     <form id='inputDate' action="save.php"  method="post"></form>
-    Type your date of birth:<input type="date" name="dateOfBirth"><br>
-    <input type="button" onclick="saveDate()" value="Submit">
+    Type your date of birth:<input type="number" id='dateOfBirth' name="dateOfBirth"><br>
+    <input type="button" id='saveHoroscopebtn' value="Submit">
     </form>
+    
     <div class="space">
-
+        <p id='errorText'>hej</p>
     </div>
-    <button id='saveHoroscope'>Save</button>
+    <button id='saveHoroscope' class='savebtn hidden'>Save</button>
     <button id='updateHoroscope'>Update</button>
     <button id='removeHoroscope'>Delete</button>
 </body>

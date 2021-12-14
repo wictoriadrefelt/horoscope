@@ -1,9 +1,25 @@
 *{
     box-sizing: border-box;
+    font-family: 'Meow Script', cursive;
 }
 
-.body {
-    background-color: aliceblue;
+body {
+   background-image: url('images/stars2.png');
+   backface-visibility: hidden;
+   color: white; 
+   z-index: -1;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+
+
+
 }
 
 .horoscopeDisplay {
