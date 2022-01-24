@@ -7,3 +7,8 @@ Needs to be run on a server in order for the project to work.
 
 
 
+
+https://github.com/wictoriadrefelt/horoscope
+
+
+
