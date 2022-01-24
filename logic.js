@@ -1,5 +1,7 @@
 initEvents()
 
+
+// global variables
 let yourSign = document.getElementById('sign')
 let save = document.getElementById('save')
 let update = document.getElementById('update')
@@ -7,7 +9,12 @@ let del = document.getElementById('del')
 let postMethod = 'POST'
 let getMethod = 'GET'
 let deleteMethod = 'DELETE'
+display = document.querySelector('.signDisplay');
 
+
+
+
+// function for event handlers 
 function initEvents(){
     document.getElementById('save').addEventListener('click', function() {
         saveHoroscope() });
@@ -60,7 +67,7 @@ function getHoroscope() {
 }
 
 
-
+// lets user save horoscope. 
 function saveHoroscope() {
     let dateOfBirth = document.getElementById('input').value;
     if(dateOfBirth) {
@@ -90,8 +97,8 @@ function saveHoroscope() {
 
 
 
-display = document.querySelector('.signDisplay');
 
+// lets user update previously saved horoscope
 function updateHoroscope() {
     
     let dateOfBirth = document.getElementById('input').value;
@@ -111,7 +118,7 @@ function updateHoroscope() {
     });
 }
 
-
+// lets user delete saved horoscope. 
 function deleteHoroscope() {
     
     let dateOfBirth = document.getElementById('input').value;
