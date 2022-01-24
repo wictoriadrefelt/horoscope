@@ -2,32 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
-    <script src="logic.js" defer></script>
-        <title>Horoscope</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="./logic.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Horoscope viewer</title>
 </head>
-<body class='backdrop'>
-    <header>
-        <h1>Welcome to your personal horoscope</h1>
-    </header>
-    <div class="horoscopeDisplay">
-        <h1 id='yourHoroscope'>Something</h1>
-    </div>
-    <form id='inputDate' action="save.php"  method="post"></form>
-    Type your date of birth:<input type="number" id='dateOfBirth' name="dateOfBirth"><br>
-    <input type="button" id='saveHoroscopebtn' value="Submit">
-    </form>
+<body>
+    <main>
+        <div class="title">Welcome to view your Horoscope</div>
+    <div class="container">
+        <h2 id='sign' class='hidden'>Your sign is</h2>
+        <div id="signDisplay"></div>
+            <div class="date">
+                <input type="date" id="input" min='2021-01-01' max='2021-12-31'>
+            </div>
+        <div class="buttonContainer">
+            <button id='save' class='save' >Save Horoscope</button>
+            <button id='update' class='update hidden' >Update Horoscope</button>
+            <button id='del' class='del hidden'>Delete saved Horoscope</button>
+        </div>
     
-    <div class="space">
-        <p id='errorText'>hej</p>
+        
     </div>
-    <button id='saveHoroscope' class='savebtn hidden'>Save</button>
-    <button id='updateHoroscope'>Update</button>
-    <button id='removeHoroscope'>Delete</button>
+    </main>
 </body>
-</html>
