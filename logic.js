@@ -9,10 +9,19 @@ let del = document.getElementById('del')
 let postMethod = 'POST'
 let getMethod = 'GET'
 let deleteMethod = 'DELETE'
-display = document.querySelector('.signDisplay');
+let display = document.querySelector('.signDisplay');
+let sign = document.getElementById('sign')
 
 
 
+function hideElement(itemToHide) {
+    itemToHide.classList.add('hidden')
+}
+
+
+function showElement(itemToShow){
+    itemToShow.classList.remove('hidden')
+}
 
 // function for event handlers 
 function initEvents(){
@@ -21,7 +30,7 @@ function initEvents(){
 
         
     document.getElementById('update').addEventListener('click', function() {
-    updateHoroscope() });
+        updateHoroscope() });
 
     document.getElementById('del').addEventListener('click', function() {
         deleteHoroscope() });
@@ -52,13 +61,14 @@ function getHoroscope() {
         if(newStr != 'l') {
             
             document.getElementById('signDisplay').innerHTML = newStr;
-            document.getElementById('sign').classList.remove('hidden')
+            showElement(sign)
+            
             
         } else {
-            yourSign.classList.add('hidden')
-            save.classList.remove('hidden')
-            del.classList.add('hidden')
-            update.classList.add('hidden')
+            hideElement(yourSign)
+            showElement(save)
+            hideElement(del)
+            hideElement(update)
             document.getElementById('signDisplay').innerHTML = "Horoscope deleted";
            
         }
@@ -134,10 +144,11 @@ function deleteHoroscope() {
             getHoroscope();
         }else{
             document.getElementById('signDisplay').innerHTML = " ";
-            yourSign.classList.add('hidden')
-            del.classList.add('hidden')
-            update.classList.add('hidden')
-            save.classList.remove('hidden')
+            hideElement(yourSign)
+            hideElement(del)
+            hideElement(update)
+            showElement(save)
+            
         }
     });
 }
