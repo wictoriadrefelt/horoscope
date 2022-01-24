@@ -48,8 +48,8 @@ function makeRequest(url, method, formData, callback) {
         return response.json()
     }).then((result) => {
         callback(result);
-    }).catch((err) => {
-        console.log("Error: ", err)
+    }).catch((error) => {
+        console.log("Error: ", error)
     })
     
 }
@@ -58,12 +58,9 @@ function getHoroscope() {
     makeRequest("./server/viewHoroscope.php", getMethod, undefined, (result) => {
         result = JSON.stringify(result)
         var newStr = result.substring(2, result.length-2);
-        if(newStr != 'l') {
-            
+        if(newStr != 'l') {      
             document.getElementById('signDisplay').innerHTML = newStr;
             showElement(sign)
-            
-            
         } else {
             hideElement(yourSign)
             showElement(save)
@@ -81,10 +78,7 @@ function getHoroscope() {
 function saveHoroscope() {
     let dateOfBirth = document.getElementById('input').value;
     if(dateOfBirth) {
-
-    
         let url = "./server/addHoroscope.php"
-        
         let formData = new FormData()
         formData.set("date", dateOfBirth) 
         makeRequest(url, postMethod, formData, (result) => {
@@ -112,10 +106,7 @@ function saveHoroscope() {
 function updateHoroscope() {
     
     let dateOfBirth = document.getElementById('input').value;
-
-    let url = "./server/updateHoroscope.php"
-
-    
+    let url = "./server/updateHoroscope.php"  
     let body = new FormData()
     body.set("date", dateOfBirth) 
     makeRequest(url, postMethod, body, (result) => {
@@ -132,10 +123,7 @@ function updateHoroscope() {
 function deleteHoroscope() {
     
     let dateOfBirth = document.getElementById('input').value;
-
     let url = "./server/deleteHoroscope.php"
-    
-    
     let formData = new FormData()
     formData.set("date", dateOfBirth) 
     makeRequest(url, deleteMethod, formData, (result) => {
