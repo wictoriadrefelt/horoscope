@@ -57,10 +57,11 @@ function listHoroscope($date) {
             'Sagittarius'
         );
         return $sign;
-    } else if($date >= '2021-12-22' && $date <= '2021-01-20'){
+    } else{
         $sign = array(
             'Capricorn'
         );
+        
         return $sign;
     }
 };
